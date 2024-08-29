@@ -8,10 +8,6 @@ sequelize.define(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         name_category: {
           type: DataTypes.STRING,
           allowNull: false,

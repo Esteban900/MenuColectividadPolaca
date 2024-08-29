@@ -15,6 +15,6 @@ menuRouter.get('/:tipo_venta', getSaleTypeHandler);
 menuRouter.get('/:tipo_venta/:categoria', getProductsByCategoryHandler );
 
 // Ruta para cargar los productos según la subcategoría dentro de la categoría y tipo de venta
-menuRouter.get('/:tipo_venta/:categoria/subcategoria', getSuBCategoryHandler);
+menuRouter.get('/:tipo_venta/:categoria/:subcategoria', getSuBCategoryHandler);
 
 module.exports = menuRouter;

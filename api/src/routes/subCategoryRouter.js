@@ -1,22 +1,28 @@
 const { Router } = require('express');
-const subcategory = require('../models/subcategory');
-
-
-
-// 'Bebidas sin alcohol',
-// 'Bebidas con alcohol',
-// 'Tragos tipicos',
-// 'Cafeteria',
-// 'Salon',
-// 'Kiosco',
-// 'Postres tipicos',
+const {
+    createSubCategoryHandler,
+    getAllSubCategoryHandler,
+    getSubCategoryByIdHandler,
+    updateSubCategoryHandler,
+    deleteSubCategoryHandler
+} = require('../handlers/SubCategory/subCategoryHandlers');
 
 const subCategoryRouter = Router();
 
-subCategoryRouter.get('/bebidasSinAlcohol', getBebidasSinAlcoholHandler);
-subCategoryRouter.get('/bebidasConAlcohol', getBebidasConAlcoholHandler);
-subCategoryRouter.get('/tragosTipicos', getTragosTipicosHandler);
-subCategoryRouter.get('/cafeteria', getCafeteriaHandler);
-subCategoryRouter.get('/Salon', getSalonHandler);
-subCategoryRouter.get('/postresTipicos', getPostresTipicosHandler);
-subCategoryRouter.get('/kiosco', getKioskoHandler);
+// Crear un nuevo SubCategory
+subCategoryRouter.post('/', createSubCategoryHandler);
+
+// Obtener todos los SubCategory
+subCategoryRouter.get('/', getAllSubCategoryHandler);
+
+// Obtener un SubCategory por ID
+subCategoryRouter.get('/:id', getSubCategoryByIdHandler);
+
+// Actualizar un SubCategory por ID
+subCategoryRouter.put('/:id', updateSubCategoryHandler);
+
+
+// Eliminar un SubCategory por ID
+subCategoryRouter.delete('/:id', deleteSubCategoryHandler);
+
+module.exports = subCategoryRouter;

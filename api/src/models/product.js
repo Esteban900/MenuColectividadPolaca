@@ -28,6 +28,42 @@ sequelize.define(
             type: DataTypes.BOOLEAN,
             defaultValue: true,
         },
+        category: {
+            type: DataTypes.STRING, 
+            allowNull: true,
+            defaultValue: null,
+            validate: {
+              isValidCategory(value) {
+                const validCategories = [
+                  'Platos',
+                  'Bebidas',
+                  'Postres',
+                ];
+                if (!validCategories.includes(value)) {
+                    throw new Error('Invalid category');
+                  }
+              },
+            },
+          },
+          subCategory: {
+            type: DataTypes.STRING, 
+            allowNull: true,
+            defaultValue: null,
+            validate: {
+              isValidSubCategory(value) {
+                const validSubCategories = [
+                    'Platos_tipicos',
+                  'Bebida_sin_alcohol',
+                  'Bebida_con_alcohol',
+                  'Postres',
+                  'Comida_Kiosco',
+                ];
+                if (!validSubCategories.includes(value)) {
+                    throw new Error('Invalid subCategory');
+                  }
+              },
+            },
+          },
         
     },
     {timestamps: false,
