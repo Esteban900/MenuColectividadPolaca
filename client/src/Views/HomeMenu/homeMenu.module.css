@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+  }
+  
+  .backgroundImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .menuButton {
+    width: 80%;
+    max-width: 300px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .menuButton:hover {
+    background-color: #cc0000;
+  }
+  
+  @media (max-width: 768px) {
+    .menuButton {
+      width: 90%;
+    }
+  }

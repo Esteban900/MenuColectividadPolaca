@@ -1,0 +1,57 @@
+.container {
+    text-align: center;
+    background-image: url('https://agendamisionera.com/wp-content/uploads/2022/05/colectividad-polaca.jpeg'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+  }
+  
+  .header {
+    background-color: rgba(255, 0, 0, 0.9);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .text h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .text p {
+    margin: 5px 0;
+    font-size: 18px;
+  }
+  
+  .buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+  }
+  
+  .button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+  }
+  
+  .button:hover {
+    background-color: darkred;
+  }

@@ -5,7 +5,6 @@ const path = require('path');
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 
 
-
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/menupolonia`, {
     logging: false, // set to console.log to see the raw SQL queries
     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
@@ -40,8 +39,9 @@ const { User, Product, SaleType, Category, SubCategory } = sequelize.models;
 //relacion de tablas
 
 //USER-PRODUCT
-User.hasMany(Product, { onUpdate: "CASCADE" }),
-Product.belongsTo(User )
+
+User.belongsToMany(Product, { through: "user_product" });
+Product.belongsToMany(User, { through: "user_product" });
 
 // //PRODUCT-CATEGORY
 // Category.hasMany(Product, { onUpdate: "CASCADE" }),
