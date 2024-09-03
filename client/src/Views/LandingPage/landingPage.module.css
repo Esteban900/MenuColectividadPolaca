@@ -1,34 +1,56 @@
 .container {
     text-align: center;
-    background-image: url('https://agendamisionera.com/wp-content/uploads/2022/05/colectividad-polaca.jpeg'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325537/WhatsApp_Image_2024-09-02_at_21.50.19_iwp8sp.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
     background-size: cover;
     background-position: center;
     height: 100vh;
     color: white;
+  
   }
   
   .header {
-    background-color: rgba(255, 0, 0, 0.9);
-    padding: 10px;
+    /* background-color: rgba(255, 0, 0, 0.9); */
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325464/1_nwqpyi.jpg');
+    background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+    height: 150px; /* Establece la altura deseada */
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-radius: 5px;
   }
   
   .logo {
     width: 50px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
+    mix-blend-mode: multiply;
+    background-color: white;
+  
   }
   
   .text h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 29px;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
   }
   
   .text p {
     margin: 5px 0;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
   }
   
   .buttonsContainer {
@@ -43,15 +65,79 @@
     background-color: red;
     color: white;
     border: none;
-    padding: 15px 30px;
+    padding: 35px 30px;
     margin: 10px;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
     width: 80%;
     max-width: 300px;
     border-radius: 5px;
   }
   
+  .buttonMenu {
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325216/tipico2_fitgi9.png');
+    background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
+   /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+   background-position: center; 
+    color: white;
+    border: none;
+    padding: 25px 30px;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+  }
+  .buttonQueen {
+    /* background-color: red; */
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725324939/fondoreina2_q1xq2m.png');
+     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
+    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; 
+    color: white;
+    border: none;
+    padding: 25px 40px;
+    margin: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  }
+  .buttonAbout {
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325171/colectividad_jxtxvi.png');
+     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
+    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; 
+    color: white;
+    border: none;
+    padding: 25px 30px;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+  }
   .button:hover {
     background-color: darkred;
   }
