@@ -7,7 +7,7 @@ const LandingPage = () => {
  const navigate = useNavigate();
 
   const handleMenuClick = () => {
-    navigate('/home-menu');
+    navigate('/home');
   };
 
   return (
@@ -18,8 +18,8 @@ const LandingPage = () => {
           <h2>Colectividad Polaca</h2>
           <p>Witamy w Naszym Domu Polski</p>
           <p>¡Bienvenido a nuestra casa polaca!</p>
-        </div>
       </div>
+        </div>
       <div className={styles.buttonsContainer}>
         <button className={styles.buttonMenu} onClick={handleMenuClick} >Menu</button>
         <button className={styles.buttonQueen}>Nuestra Reina</button>

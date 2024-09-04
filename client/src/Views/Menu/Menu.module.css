@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGUVOhkmEO-ub6FJeWLaLIK_iPGwqK8LelOg&s'); */
+    background-color: rgb(105, 4, 26);
+    background-size: cover;
+    background-position: center;
+    margin-top: 170px;
+    border-radius: 10px;
+  }
+    
+  /* Responsivo para dispositivos móviles */
+  @media (min-width: 768px) {
+  
+    .cardContainer {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+  /* .backButton {
+    background-color: red;
+    /*border: none; /* Asegúrate de que el borde esté desactivado */
+  
+   /* cursor: pointer;
+    padding: 20px;
+    position: absolute; /* Permite que el botón se posicione respecto a su contenedor */
+    /*left: 0; /* Alinea el botón al borde izquierdo del contenedor */
+    /*top: 50%; /* Opcional: centra verticalmente el botón */
+    /*transform: translateY(-50%); /* Opcional: ajusta el centro vertical del botón */
+/*} */
+.buttonBack {
+height: 40%;
+}
+@media (min-width: 768px) {   
+    .buttonBack {
+        position:static; /* Restablece la posición en pantallas pequeñas */
+        /*margin-left: -240px; /* Ajusta el margen izquierdo */
+        /*margin-top: 30px; /* Añade margen superior para separar del header */
+    }
+  }
+  /* }
+  .backButton svg {
+    font-size: 30px; /* Tamaño del ícono */
+   /* color: #000;     /* Color del ícono */
+    /*border-radius: 1px solid black;
+ 
+} */
+  
+
+  

@@ -1,0 +1,157 @@
+.menuContainer {
+  /* background-color: blue; */
+  background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725329650/WhatsApp_Image_2024-09-02_at_23.13.04_fgvwae.jpg');
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-image: url('path_to_your_image/background_image.jpg'); */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header {
+  margin-top: -70px;
+   /* background-color: green;  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegura que el contenido se distribuya adecuadamente */
+    /* width: 98%; */
+    /* height: 40px; */
+    padding: 0px;
+    border-radius: 2px;
+  }
+  /*bandera + inicio*/
+  .imageContainer {
+    background-color: yellow;
+    position: relative;
+    /* display: inline-block;*/
+    text-align: center; 
+    cursor: pointer;
+    /* padding-left: 130px; */
+}
+
+.logo {
+    width: 30%;
+    height: 30%;
+    border-radius: 6px;
+}
+/* BOTON BACK*/
+.buttonBack {
+    position: absolute;
+    display: flex;
+    /* align-items:start; */
+    cursor: pointer;
+    /* padding-left: -500px; */
+    width: 90px;
+    height: 30px;
+    margin-left:10% ; 
+    margin-top: 0%; 
+  }
+  
+  .logoBack {
+    border-radius: 95px;
+    width: 30px;
+    /* height: auto; */
+  
+  }
+
+.text {
+    position: absolute;
+    top: 5%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+     text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black; 
+}
+
+/* .backButton {
+    background-color: transparent;
+    border: none; /* Asegúrate de que el borde esté desactivado */
+   /* cursor: pointer;
+    padding: 8px;
+    position: absolute; /* Permite que el botón se posicione respecto a su contenedor */
+    /*left: 0; /* Alinea el botón al borde izquierdo del contenedor */
+    /*top: 50%; /* Opcional: centra verticalmente el botón */
+    /*transform: translateY(-50%); /* Opcional: ajusta el centro vertical del botón */
+/*}
+
+@media (max-width: 768px) {   
+    .backButton {
+        position:static; /* Restablece la posición en pantallas pequeñas */
+  /*      margin-left: -240px; /* Ajusta el margen izquierdo */
+    /*    margin-top: 30px; /* Añade margen superior para separar del header */
+    /*}
+
+    .logo {
+        width: 60px;
+        height: 40px;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+}
+
+.backButton svg {
+    font-size: 34px; /* Tamaño del ícono */
+    /*color: #000;     /* Color del ícono */
+/*} */
+
+.menuOptions {
+  /* background-color: yellow; */
+  margin-top: 10px;
+    padding: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45%;
+    filter: drop-shadow(0px 0px 1px white);
+}
+
+.menuButton {
+    width: 200px;
+    padding: 45px 10px;
+    margin: 15px;
+    font-size: 15px;
+    cursor: pointer;
+    max-width: 300px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px  1px 0 black,
+        1px  1px 0 black;
+}
+
+.menuButton:hover {
+    background-color: darkred;
+}
+
+@media (max-width: 768px) {
+    .menuButton {
+        font-size: 20px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menuButton {
+        font-size: 20px;
+        padding: 20px;
+    }
+}

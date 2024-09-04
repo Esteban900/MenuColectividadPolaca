@@ -1,6 +1,8 @@
 .container {
     text-align: center;
-    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325537/WhatsApp_Image_2024-09-02_at_21.50.19_iwp8sp.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+    /* background-color: rgb(247, 202, 202); */
+    /*background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725329650/WhatsApp_Image_2024-09-02_at_23.13.04_fgvwae.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGUVOhkmEO-ub6FJeWLaLIK_iPGwqK8LelOg&s');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -10,22 +12,25 @@
   
   .header {
     /* background-color: rgba(255, 0, 0, 0.9); */
-    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325464/1_nwqpyi.jpg');
+    /* background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325464/1_nwqpyi.jpg'); */
     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center;
-    height: 150px; /* Establece la altura deseada */
-    padding: 0;
+    height:180px; /* Establece la altura deseada */
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 5px;
+    /* filter: opacity(0.9); */
+    /* overflow: hidden; */
   }
   
   .logo {
     width: 50px;
-    margin-bottom: 1px;
+    margin-bottom: 10px;
+    border-radius: 30px;
     mix-blend-mode: multiply;
     background-color: white;
   
@@ -35,22 +40,23 @@
     margin: 0;
     font-size: 29px;
     font-weight: bold;
-    text-shadow: 
+     text-shadow: 
         -1px -1px 0 black,  
          1px -1px 0 black,
         -1px  1px 0 black,
-         1px  1px 0 black;
+         1px  1px 0 black; 
   }
   
   .text p {
+
     margin: 5px 0;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
-    text-shadow: 
+     text-shadow: 
         -1px -1px 0 black,  
          1px -1px 0 black,
         -1px  1px 0 black,
-         1px  1px 0 black;
+         1px  1px 0 black; 
   }
   
   .buttonsContainer {
@@ -59,9 +65,10 @@
     align-items: center;
     justify-content: center;
     height: 70%;
+    filter:drop-shadow(0px 0px 1px white);
   }
   
-  .button {
+  /* .button {
     background-color: red;
     color: white;
     border: none;
@@ -72,20 +79,22 @@
     width: 80%;
     max-width: 300px;
     border-radius: 5px;
-  }
+  } */
   
   .buttonMenu {
-    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325216/tipico2_fitgi9.png');
+  
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png');
     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
-   /*background-repeat: no-repeat; /* Evita que la imagen se repita */
-   background-position: center; 
+   background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; 
+    /* background-color: red; */
     color: white;
     border: none;
-    padding: 25px 30px;
+    padding: 45px 30px;
     margin: 10px;
     font-size: 25px;
     cursor: pointer;
-    width: 80%;
+    width: 95%;
     max-width: 300px;
     border-radius: 5px;
     font-weight: bold;
@@ -97,17 +106,18 @@
   }
   .buttonQueen {
     /* background-color: red; */
+    
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725324939/fondoreina2_q1xq2m.png');
      background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
-    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; 
     color: white;
     border: none;
-    padding: 25px 40px;
+    padding: 45px 30px;
     margin: 10px;
-    font-size: 28px;
+    font-size: 25px;
     cursor: pointer;
-    width: 80%;
+    width: 95%;
     max-width: 300px;
     border-radius: 8px;
     font-weight: bold;
@@ -120,15 +130,16 @@
   .buttonAbout {
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325171/colectividad_jxtxvi.png');
      background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
-    /*background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; 
-    color: white;
+    /* background-color: red; */
+    color: white; 
     border: none;
-    padding: 25px 30px;
+    padding: 45px 30px;
     margin: 10px;
     font-size: 25px;
     cursor: pointer;
-    width: 80%;
+    width: 95%;
     max-width: 300px;
     border-radius: 5px;
     font-weight: bold;
@@ -137,7 +148,4 @@
      1px -1px 0 black,
     -1px  1px 0 black,
      1px  1px 0 black;
-  }
-  .button:hover {
-    background-color: darkred;
   }
