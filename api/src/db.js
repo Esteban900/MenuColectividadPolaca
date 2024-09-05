@@ -40,8 +40,8 @@ const { User, Product, SaleType, Category, SubCategory } = sequelize.models;
 
 //USER-PRODUCT
 
-User.belongsToMany(Product, { through: "user_product" });
-Product.belongsToMany(User, { through: "user_product" });
+// User.belongsToMany(Product, { through: "user_product" });
+// Product.belongsToMany(User, { through: "user_product" });
 
 // //PRODUCT-CATEGORY
 // Category.hasMany(Product, { onUpdate: "CASCADE" }),

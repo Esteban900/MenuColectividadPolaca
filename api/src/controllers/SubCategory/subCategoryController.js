@@ -2,8 +2,7 @@ const { SubCategory } = require('../../db');
 
 // Crear un SubCategory
 const createSubCategory = async (name_subCategory) => {
-    console.log("controler create subcategory");
-    
+       
     try {
         const newSubCategory = await SubCategory.create({ name_subCategory });
         return newSubCategory;

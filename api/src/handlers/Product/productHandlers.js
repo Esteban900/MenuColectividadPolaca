@@ -1,3 +1,7 @@
+const multer = require('multer');
+const fs = require('fs-extra');
+const storage = multer.memoryStorage();
+
 const {
     createProduct,
     getAllProducts,
@@ -6,15 +10,45 @@ const {
     deleteProduct
 } = require('../../controllers/Product/productController');
 
+const fileProduct = function (req, file, cb) {
+    if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+      return cb(new Error('Solo se permiten archivos JPG, JPEG y PNG'));
+    }
+    cb(null, true);
+  };
+  const upload = multer({ storage: storage, fileProduct: fileProduct }).array('files');
+
 // Crear un producto
 const createProductHandler = async (req, res) => {
-    const { name, description, imageUrl, cost, availability, category, subCategory, saleTypeIds } = req.body;
-    try {
-        const newProduct = await createProduct(name, description, imageUrl, cost, availability, category, subCategory, saleTypeIds);
+      
+    upload(req, res, async (err) => {
+        if (err) {
+          return res.status(400).json({ error: err.message });
+
+        }
+        try {
+            const files = req.files;  
+            if (!files || files.length === 0) {
+              return res.status(400).json({ error: 'No files uploaded' });
+            }
+            
+        const { name, description, cost, availability, category, subCategory, salesTypes } = req.body;
+//  const uploadedImage = await handleUpload(files[0].buffer); // Cambia aquí para pasar el buffer
+        const newProduct = await createProduct(
+            name,
+            description,
+            // uploadedImage.url,
+            cost,
+            availability,
+            category,
+            subCategory, 
+            salesTypes,
+            files);
         res.status(201).json(newProduct);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
+});
 };
 
 // Obtener todos los productos
@@ -41,10 +75,11 @@ const getIdProductHandler = async (req, res) => {
 
 // Actualizar un producto
 const updateProductHandler = async (req, res) => {
-    const { id } = req.params;
-    const updates = req.body;
     try {
-        const updatedProduct = await updateProduct(id, updates);
+        const { id } = req.params;
+        const updates = req.body;
+        const files = req.files;
+        const updatedProduct = await updateProduct(id, updates,files);
         res.status(200).json(updatedProduct);
     } catch (error) {
         res.status(400).json({ error: error.message });

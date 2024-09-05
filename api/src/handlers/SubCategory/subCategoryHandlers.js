@@ -8,7 +8,7 @@ const {
 
 // Crear un SubCategory
 const createSubCategoryHandler = async (req, res) => {
-    console.log("handler create subcategory");
+    
     
     const { name_subCategory } = req.body;
     try {

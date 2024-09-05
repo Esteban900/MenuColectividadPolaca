@@ -17,8 +17,8 @@ mainRouter.use('/menu', menuRouter);
 mainRouter.use('/saletype', saleTypeRouter);
 mainRouter.use('/category', categoryRouter)
 mainRouter.use('/subCategory', subCategoryRouter)
-mainRouter.use('/users', userRouter); // Añadir la ruta de usuarios
-mainRouter.use('/auth', authRouter);
+// mainRouter.use('/users', userRouter); // Añadir la ruta de usuarios
+// mainRouter.use('/auth', authRouter);
 
 
 

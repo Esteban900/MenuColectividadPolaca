@@ -9,10 +9,13 @@ const Home = () => {
 
     const handleMenuClick = () => {
         navigate('/'); // Redirige a la página de inicio o landing page
+        console.log("click back", handleMenuClick);
+        
     }
 
     const handleBackClick = () => {
         navigate(-1); //regreso a la pag anterior
+        console.log("click back", handleBackClick);
     }
     
     const handleSalonClick = () => {

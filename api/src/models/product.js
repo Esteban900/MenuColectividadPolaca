@@ -64,6 +64,22 @@ sequelize.define(
               },
             },
           },
+          salesTypes: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            defaultValue: null,
+            validate: {
+                isValidSubCategory(value) {
+                    const validSubCategories = ['Salon', 'Kiosco'];
+                    const subCategories = value ? value.split(',').map(v => v.trim()) : [];
+                    for (const subCategory of subCategories) {
+                        if (!validSubCategories.includes(subCategory)) {
+                            throw new Error('Invalid subCategory');
+                        }
+                    }
+                },
+            },
+        }
         
     },
     {timestamps: false,

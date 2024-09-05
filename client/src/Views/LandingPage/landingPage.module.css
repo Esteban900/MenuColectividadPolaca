@@ -2,7 +2,8 @@
     text-align: center;
     /* background-color: rgb(247, 202, 202); */
     /*background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725329650/WhatsApp_Image_2024-09-02_at_23.13.04_fgvwae.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGUVOhkmEO-ub6FJeWLaLIK_iPGwqK8LelOg&s');
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGUVOhkmEO-ub6FJeWLaLIK_iPGwqK8LelOg&s'); */
+    background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725509582/5_nnqlht.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
