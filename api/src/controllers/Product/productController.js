@@ -1,30 +1,28 @@
-const { Product, SaleType, Category, SubCategory } = require('../../db');
+const { Product } = require('../../db');
 const { handleUpload, updateUpload  } = require('../../middleware/cloudinaryService');
 
 // Crear un producto
 const createProduct = async (name, description, cost, availability, category, subCategory, salesTypes, files) => {
-    
+          
+    const salesTypesString = Array.isArray(salesTypes) ? salesTypes.join(',') : salesTypes;
     try {
-        const uploadedImage = await handleUpload(files[0].buffer); // 
-            // const uploadedImage = await handleUpload(files.buffer);
-        const newProduct = await Product.create({
-            name,
-            description,
-            imageUrl: uploadedImage.public_id,
-            cost,
-            availability,
-            category,
-            subCategory,
-            salesTypes,
-        });
-    
-        // if (saleTypeIds && saleTypeIds.length > 0) {
-        //     await newProduct.setSaleTypes(saleTypeIds);
-        // }
+            const uploadedImage = await handleUpload(files[0].buffer);
+            
+            await await Product.create({
+                name,
+                description,
+                imageUrl: uploadedImage.url,
+                cost,
+                availability,
+                category,
+                subCategory,
+                salesTypes:salesTypesString,
+            });
+          
 
-        return newProduct;
+       // return newProduct;
     } catch (error) {
-        throw error;
+        throw new Error('Error uploading gallery: ' + error.message);
     }
 };
 
@@ -34,16 +32,9 @@ const getAllProducts = async () => {
     try {
         const allProducts = await Product.findAll({
 
-            include: [
-                {
-                    model:SaleType,
-                    attributes: ['id_lugar_venta', 'name_lugar_venta'],
-                         through: {
-                             attributes: [],
-                           },
-                },
-                
-           ]
+            through: {
+                attributes: [],
+              },
 
         });
         

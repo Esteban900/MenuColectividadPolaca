@@ -1,0 +1,17 @@
+.container {
+    width: 99%;
+   background-color: rgb(105, 4, 26); 
+   border-radius: 10px;
+  
+}
+
+.text{
+    
+    width: -80px;
+    height: 40px;
+  
+
+}
+.divCard{
+    padding-top: 0.1vh;
+}

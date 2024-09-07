@@ -44,7 +44,7 @@
 }
 /* BOTON BACK*/
 .buttonBack {
-    /* background-color: yellow; */
+  
     position: absolute;
     display: flex;
     /* align-items:start; */

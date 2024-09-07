@@ -36,7 +36,7 @@ const Home = () => {
 {/* <button onClick={handleBackClick} className={style.backButton}><TbArrowBackUp /></button> */}
 <div className={style.menuOptions}>
         <button onClick={handleSalonClick} className={style.menuButton}> Salon</button>
-        <button className={style.menuButton}>Kiosco</button>
+        {/* <button className={style.menuButton}>Kiosco</button> */}
             </div>
         </div>
     );

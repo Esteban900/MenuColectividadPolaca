@@ -1,21 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import CardsContainer from "../../Components/CardsContainer/CardsContainer";
 import style from './Menu.module.css';
 import NavBar from "../../Components/NavBar/NavBar";
-// import { TbArrowBackUp } from "react-icons/tb";
-// import { useNavigate } from "react-router-dom";
+import { getProductsSubCategorias } from "../../redux/actions";
 
 const Menu = () => {
+    const dispatch = useDispatch();
+    
+    // Obtener los productos filtrados desde el estado global
+    const currentProducts = useSelector((state) => state.subCategoria);
 
-    // const navigate = useNavigate();
-   
-   
-    return(
+    // Despachar acción para obtener productos por defecto al cargar
+    useEffect(() => {
+        dispatch(getProductsSubCategorias('Salon', 'Platos Tipicos', 'Platos Tipicos'));
+    }, [dispatch]);
+
+    return (
         <div className={style.container}>
-            <NavBar/>     
-            <CardsContainer/>
-    </div>
-    )
+            {/* Pasar valores por defecto */}
+            <NavBar defaultSelectedMenu="Platos Tipicos" defaultSelectedOption="Platos Tipicos" />     
+            {/* Pasar productos filtrados al CardsContainer */}
+            <CardsContainer currentProducts={currentProducts} />
+        </div>
+    );
 };
 
 export default Menu;

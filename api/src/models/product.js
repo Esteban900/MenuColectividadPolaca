@@ -35,9 +35,8 @@ sequelize.define(
             validate: {
               isValidCategory(value) {
                 const validCategories = [
-                  'Platos',
+                  'Platos_Tipicos',
                   'Bebidas',
-                  'Postres',
                 ];
                 if (!validCategories.includes(value)) {
                     throw new Error('Invalid category');
@@ -52,10 +51,10 @@ sequelize.define(
             validate: {
               isValidSubCategory(value) {
                 const validSubCategories = [
-                    'Platos_tipicos',
-                  'Bebida_sin_alcohol',
-                  'Bebida_con_alcohol',
-                  'Postres',
+                    'Platos_Tipicos',
+                  'Bebidas_sin_alcohol',
+                  'Bebidas_con_alcohol',
+                  'Postres_Tradicionales',
                   'Comida_Kiosco',
                 ];
                 if (!validSubCategories.includes(value)) {

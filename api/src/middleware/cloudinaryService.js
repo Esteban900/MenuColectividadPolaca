@@ -9,9 +9,9 @@ cloudinary.config({
 });
 // subir un solo archivo
 const handleUpload = async (fileBuffer) => {
-  try {
-    return new Promise((resolve, reject) => {
-      cloudinary.uploader.upload_stream({ resource_type: 'auto' }, (error, result) => {
+  try {   
+    return new Promise((resolve, reject) => {         
+      cloudinary.uploader.upload_stream({ resource_type: 'auto' }, (error, result) => {               
         if (error) {
           reject(new Error('Error al cargar la imagen a Cloudinary: ' + error.message));
         } else {
@@ -26,6 +26,49 @@ const handleUpload = async (fileBuffer) => {
     throw new Error('Error al cargar la imagen a Cloudinary: ' + error.message);
   }
 };
+
+// const { url } = require('inspector');
+// const path = require('path');
+// // const cloudinary = require('cloudinary').v2;
+
+// // const { CLOUD_NAME, CLOUD_API_KEY, CLOUD_API_SECRET } = process.env;
+
+// // cloudinary.config({
+// //   cloud_name: CLOUD_NAME,
+// //   api_key: CLOUD_API_KEY,
+// //   api_secret: CLOUD_API_SECRET,
+// // });
+
+
+// // subir un solo archivo
+// const handleUpload = async (fileBuffer) => {
+//   try {
+//     console.log("cloudinary");
+//     console.log("veo filebuffer", fileBuffer);
+    
+//     return new Promise((resolve, reject) => {
+//       console.log("entro a la promesa")
+//       cloudinary.uploader.upload_stream({ resource_type: 'auto' }, (error, result) => {
+        
+        
+//         if (error) {
+         
+          
+//           reject(new Error('Error al cargar la imagen a Cloudinary: ' + error.message));
+//         } else {
+         
+//           resolve({
+//             public_id: result.public_id,
+//             url: result.secure_url 
+//           });
+//         }
+//       }).end(fileBuffer);
+            
+//     });
+//   } catch (error) {
+//     throw new Error('Error al cargar la imagen a Cloudinary: ' + error.message);
+//   }
+// };
 
 
 // const updateUpload = async (file) => {
@@ -77,7 +120,7 @@ const getAllImagesFromCloudinary = async () => {
         width: resource.width,
         height: resource.height,
         created_at: resource.created_at,
-        type: isPdf ? 'pdf' : 'image'
+        type: 'image'
       };
     });
 

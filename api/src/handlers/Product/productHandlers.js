@@ -10,46 +10,87 @@ const {
     deleteProduct
 } = require('../../controllers/Product/productController');
 
-const fileProduct = function (req, file, cb) {
+const fileFilter = function (req, file, cb) {
     if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
       return cb(new Error('Solo se permiten archivos JPG, JPEG y PNG'));
     }
     cb(null, true);
   };
-  const upload = multer({ storage: storage, fileProduct: fileProduct }).array('files');
+  
+//   const upload = multer({ storage: storage, fileFilter: fileFilter }).single('files');
+const upload = multer({ storage: storage, fileFilter: fileFilter }).array('files');
+  
 
 // Crear un producto
-const createProductHandler = async (req, res) => {
-      
-    upload(req, res, async (err) => {
-        if (err) {
-          return res.status(400).json({ error: err.message });
 
+const createProductHandler = async (req, res) => {
+    upload(req, res, async (err) => {
+      if (err) {
+        return res.status(400).json({ error: err.message });
+      }
+      try {
+        const files = req.files;  
+               
+        if (!files || files.length === 0) {
+          return res.status(400).json({ error: 'No files uploaded' });
         }
-        try {
-            const files = req.files;  
-            if (!files || files.length === 0) {
-              return res.status(400).json({ error: 'No files uploaded' });
-            }
+        const { name, description, cost, availability, category, subCategory, salesTypes } = req.body;  
+               
+        await createProduct(name, description, cost, availability, category, subCategory, salesTypes, files);
+        res.status(200).json({ message: 'Gallery uploaded successfully' });
+      } catch (error) {
+        res.status(500).json({ error: error.message });
+      }
+    });
+  };
+// const createProductHandler = async (req, res) => {
             
-        const { name, description, cost, availability, category, subCategory, salesTypes } = req.body;
-//  const uploadedImage = await handleUpload(files[0].buffer); // Cambia aquí para pasar el buffer
-        const newProduct = await createProduct(
-            name,
-            description,
-            // uploadedImage.url,
-            cost,
-            availability,
-            category,
-            subCategory, 
-            salesTypes,
-            files);
-        res.status(201).json(newProduct);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
-};
+//     upload(req, res, async (err) => {
+//         if (err) {
+                   
+//           return res.status(400).json({ error: err.message });
+          
+//         }
+//         try {
+           
+//             const files = req.file; 
+                     
+//             // if (!files || files.length === 0) {
+//             // // if(!req.file) {
+//             //     console.log("Entro al if");
+                
+//             //     return res.status(400).json({ error: 'No files uploaded' });
+//             // }
+//             // if (!file) {
+//             //     console.log("Entro al if");
+//             //     return res.status(400).json({ error: 'No files uploaded' });
+//             // }
+//             const { name, description, cost, availability, category, subCategory, saleTypes } = req.body;
+
+       
+
+//         console.log("Controllers");
+               
+//         await createProduct (name, description, cost, availability, category, subCategory, saleTypes, files);
+//   //const uploadedImage = await handleUpload(file.buffer); // Cambia aquí para pasar el buffer
+// //   console.log("muestro uploadedImage", uploadedImage);
+  
+//         // const newProduct = await createProduct(
+//         //     name,
+//         //     description,
+//         //     uploadedImage,
+//         //     cost,
+//         //     availability,
+//         //     category,
+//         //     subCategory, 
+//         //     saleTypes
+//         //     );
+//         res.status(200).json({message: "producto subido con exito"});
+//     } catch (error) {
+//         res.status(400).json({ error: error.message });
+//     }
+// });
+// };
 
 // Obtener todos los productos
 const getProductsHandler = async (req, res) => {

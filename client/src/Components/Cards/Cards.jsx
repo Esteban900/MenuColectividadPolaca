@@ -1,77 +1,48 @@
+import React from "react";
 import style from './Cards.module.css';
+import { Link, useNavigate } from "react-router-dom";
 
-const Card = () => {
-    return(
-        <div>
+const Card = (props) => {
+    const navigate = useNavigate();
 
+  const handleDetailClick = () => {
+      navigate('/detail'); // Redirige a la página de inicio o landing page
+      
+      
+  }
+    return (
         <div className={style.Card}>
-            <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
+            {/* <div onClick={handleDetailClick} className={style.detail}> */}
+                {/* <Link to={`/detail/${props.id_product}`}> */}
+            <img src={props.imageUrl} alt="Imagen no encontrada" className={style.image}   />
+                {/* </Link> */}
+            
+            {/* </div> */}
             <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
-      </div>
-      </div>
-      <div className={style.Card}>
-
-      <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
-            <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
+                <h2 className={style.title}>{props.name}</h2>
+                <span className={style.price}>$ {props.cost}</span>
+                <p className={style.description}>{props.description}</p>
+            </div>
         </div>
-      </div>
-      <div className={style.Card}>
-
-      <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
-            <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
-        </div>
-      </div>
-      <div className={style.Card}>
-
-      <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
-            <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
-        </div>
-      </div>
-      <div className={style.Card}>
-
-      <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
-            <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
-        </div>
-      </div>
-      <div className={style.Card}>
-
-      <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png" alt='props.id' className={style.image}/>
-            <div className={style.content}>
-        <h2 className={style.title}>Margherita</h2>
-        {/* <span className={style.price}>8.00 €</span> */}
-        <p className={style.description}>
-          pomodoro San Marzano D.O.P., mozzarella fiordilatte, basilico, olio extravergine di oliva
-        </p>
-        </div>
-      </div>
-        </div>
-       
-    )
+    );
 };
 
 export default Card;
+
+// import style from './Cards.module.css';
+
+// const Card = (props) => {
+//     return(
+//         <div className={style.Card}>
+//             <img src={props.imageUrl} alt='img not found' className={style.image}/>
+//             <div className={style.content}>
+//         <h2 className={style.title}>{props.name}</h2>
+//         <span className={style.price}>$ {props.cost}</span>
+//         <p className={style.description}>{props.description}</p>
+//       </div>
+//       </div>
+      
+//     )
+// };
+
+// export default Card;

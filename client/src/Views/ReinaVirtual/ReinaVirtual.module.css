@@ -28,9 +28,11 @@
       /* display: inline-block;*/
       text-align: center; 
       cursor: pointer;
-      /* padding-left: 130px; */
-      margin-left: 90px;
-      margin-right: 140px;
+      /* padding-left: 00%; */
+      /* margin-left: 140px;
+      margin-right: 140px; */
+      margin-left: 35%;
+      /* margin-right: 50%; */
       padding-top: 5px;
   }
   
