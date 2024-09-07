@@ -9,7 +9,7 @@ const app = require ('./src/app');
 const { conn } = require('./src/db');
 
 
-conn.sync({ alter: true}).then(() => {
+conn.sync({ force: true}).then(() => {
     app.listen(3001,() => {
         console.log('%s listening at 3001');
     });

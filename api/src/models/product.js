@@ -4,9 +4,9 @@ sequelize.define(
     'Product',
     {
         id_product: {
-            type: DataTypes.UUID,
+          type: DataTypes.INTEGER,
             primaryKey: true,
-            defaultValue: DataTypes.UUIDV4,
+            autoIncrement: true,
         },
         name: {
             type: DataTypes.STRING,
