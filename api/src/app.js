@@ -36,7 +36,7 @@ app.use(express.json());
 //     next();
 //   });
 app.use(cors({
-  origin: 'https://your-frontend-url.vercel.app', // Cambia esto a la URL de tu frontend
+  origin: 'https://menu-colectividad-polaca.vercel.app', // Cambia esto a la URL de tu frontend
   credentials: true,
   methods: 'GET,POST,OPTIONS,PUT,DELETE',
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept'
