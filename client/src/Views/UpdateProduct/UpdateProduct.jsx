@@ -111,7 +111,7 @@ const UpdateProduct = () => {
                             onChange={handleInputChange}
                             placeholder="Tipos de Venta"
                         />
-                        <button type="submit">Actualizar</button>
+                        <button type="submit">Actualizar!</button>
                     </form>
                 </div>
             )}
