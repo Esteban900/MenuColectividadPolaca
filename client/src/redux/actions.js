@@ -54,6 +54,31 @@ export const postProduct = (formData) => {
 };
 
 
+//modificar un producto
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+
+// Acción para actualizar un producto
+export const updateProduct = (id, formData) => {
+    return async function (dispatch) {
+        try {
+            const response = await axios.put(`${apiUrl}product/${id}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+            dispatch({
+                type: UPDATE_PRODUCT,
+                payload: response.data, // Suponiendo que el backend devuelve el producto actualizado
+            });
+            return response.data;
+        } catch (error) {
+            console.error("Error updating product:", error);
+            dispatch({ type: 'UPDATE_PRODUCT_ERROR', error: error.message });
+            throw error;
+        }
+    }
+};
+
 
 // export const postProduct = (payload) => {
  

@@ -1,4 +1,4 @@
-import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL } from './actions';
+import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, UPDATE_PRODUCT  } from './actions';
 
 const initialState = {
     products: [],
@@ -36,6 +36,13 @@ const rootReducer = (state = initialState, action) => {
                 // Suponiendo que quieres agregar el nuevo producto a la lista de productos
                 products: [...state.products, action.payload],
             };
+            case UPDATE_PRODUCT:
+                return {
+                    ...state,
+                    products: state.products.map((product) => 
+                        product.id === action.payload.id ? action.payload : product
+                    ),
+                };
         default:
             return state;
     }

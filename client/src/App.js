@@ -7,6 +7,7 @@ import SaleTypeForm from './Views/SalesTypes/SalesTypesForm';
 import Reina from './Views/ReinaVirtual/ReinaVirtual';
 import AcercaDe from './Views/AcercaDe/AcercaDe';
 import Detail from './Views/Details/Details';
+import UpdateProduct from './Views/UpdateProduct/UpdateProduct';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Route path='/reina' element={<Reina/>}/>
     <Route path='/acercade' element={<AcercaDe/>}/>
     <Route path='/detail' element={<Detail/>}/>
+    <Route path='/update' element={<UpdateProduct/>}/>
     </Routes>
     </div>
   );
