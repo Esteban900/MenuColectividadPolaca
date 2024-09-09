@@ -8,7 +8,7 @@ export const POST_CREATE_PRODUCT = 'POST_CREATE_PRODUCT';
 export const getProductsSubCategorias = (tipo_venta, categoria, subcategoria) => {
     return async function (dispatch) {
         try {
-            const response = await axios.get(`${apiUrl}/menu/${tipo_venta}/${categoria}/${subcategoria}`);
+            const response = await axios.get(`${apiUrl}menu/${tipo_venta}/${categoria}/${subcategoria}`);
             const productsSubCategorias = response.data;
 
             dispatch({
@@ -34,7 +34,7 @@ export const postProduct = (formData) => {
                 // console.log(pair[0] + ', ' + pair[1]);
             }
 
-            const response = await axios.post(`${apiUrl}/product`, formData, {
+            const response = await axios.post(`${apiUrl}product`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
