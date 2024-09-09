@@ -43,54 +43,7 @@ const createProductHandler = async (req, res) => {
       }
     });
   };
-// const createProductHandler = async (req, res) => {
-            
-//     upload(req, res, async (err) => {
-//         if (err) {
-                   
-//           return res.status(400).json({ error: err.message });
-          
-//         }
-//         try {
-           
-//             const files = req.file; 
-                     
-//             // if (!files || files.length === 0) {
-//             // // if(!req.file) {
-//             //     console.log("Entro al if");
-                
-//             //     return res.status(400).json({ error: 'No files uploaded' });
-//             // }
-//             // if (!file) {
-//             //     console.log("Entro al if");
-//             //     return res.status(400).json({ error: 'No files uploaded' });
-//             // }
-//             const { name, description, cost, availability, category, subCategory, saleTypes } = req.body;
 
-       
-
-//         console.log("Controllers");
-               
-//         await createProduct (name, description, cost, availability, category, subCategory, saleTypes, files);
-//   //const uploadedImage = await handleUpload(file.buffer); // Cambia aquí para pasar el buffer
-// //   console.log("muestro uploadedImage", uploadedImage);
-  
-//         // const newProduct = await createProduct(
-//         //     name,
-//         //     description,
-//         //     uploadedImage,
-//         //     cost,
-//         //     availability,
-//         //     category,
-//         //     subCategory, 
-//         //     saleTypes
-//         //     );
-//         res.status(200).json({message: "producto subido con exito"});
-//     } catch (error) {
-//         res.status(400).json({ error: error.message });
-//     }
-// });
-// };
 
 // Obtener todos los productos
 const getProductsHandler = async (req, res) => {
@@ -115,30 +68,15 @@ const getIdProductHandler = async (req, res) => {
 };
 
 // Actualizar un producto
-// const updateProductHandler = async (req, res) => {
-//     try {
-//         const { id } = req.params;
-//         const updates = req.body;
-//         const updatedProduct = await updateProduct(id, updates);
-//         res.status(200).json(updatedProduct);
-//     } catch (error) {
-//         res.status(400).json({ error: error.message });
-//     }
-// };
 const updateProductHandler = async (req, res) => {
-  try {
-      const { id } = req.params; // Obtenemos el ID del producto desde los parámetros de la URL
-      const updates = req.body; // Los datos actualizados, incluyendo el precio
-
-      // Llamamos a la función que actualizará el producto en la base de datos
-      const updatedProduct = await updateProduct(id, updates);
-      
-      // Si todo sale bien, enviamos una respuesta con el producto actualizado
-      res.status(200).json(updatedProduct);
-  } catch (error) {
-      // Si ocurre algún error, enviamos un mensaje de error
-      res.status(400).json({ error: error.message });
-  }
+    try {
+        const { id } = req.params;
+        const updates = req.body;
+        const updatedProduct = await updateProduct(id, updates);
+        res.status(200).json(updatedProduct);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
 };
 
 // Eliminar un producto
