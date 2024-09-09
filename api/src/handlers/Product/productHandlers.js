@@ -115,16 +115,30 @@ const getIdProductHandler = async (req, res) => {
 };
 
 // Actualizar un producto
+// const updateProductHandler = async (req, res) => {
+//     try {
+//         const { id } = req.params;
+//         const updates = req.body;
+//         const updatedProduct = await updateProduct(id, updates);
+//         res.status(200).json(updatedProduct);
+//     } catch (error) {
+//         res.status(400).json({ error: error.message });
+//     }
+// };
 const updateProductHandler = async (req, res) => {
-    try {
-        const { id } = req.params;
-        const updates = req.body;
-        const files = req.files;
-        const updatedProduct = await updateProduct(id, updates,files);
-        res.status(200).json(updatedProduct);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
+  try {
+      const { id } = req.params; // Obtenemos el ID del producto desde los parámetros de la URL
+      const updates = req.body; // Los datos actualizados, incluyendo el precio
+
+      // Llamamos a la función que actualizará el producto en la base de datos
+      const updatedProduct = await updateProduct(id, updates);
+      
+      // Si todo sale bien, enviamos una respuesta con el producto actualizado
+      res.status(200).json(updatedProduct);
+  } catch (error) {
+      // Si ocurre algún error, enviamos un mensaje de error
+      res.status(400).json({ error: error.message });
+  }
 };
 
 // Eliminar un producto

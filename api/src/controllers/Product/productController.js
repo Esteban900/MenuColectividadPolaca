@@ -69,20 +69,36 @@ const searchProductById = async (id) => {
 };
 
 // Actualizar producto
-const updateProduct = async (id, updates, files) => {
+// const updateProduct = async (id, updates) => {
+//     try {
+//         const product = await Product.findByPk(id);
+//         if (!product) {
+//             throw new Error(`ID de producto no existe, ID=${id}`);
+//         }
+//          // Si hay un archivo (nueva imagen), actualizamos la imagen en Cloudinary
+//          if (files && files.length > 0) {
+//             const file = files[0]; // Considerando que sólo se sube un archivo a la vez
+//             const updatedImage = await updateUpload(file, product.imageUrl); // Actualizar en Cloudinary
+//             updates.imageUrl = updatedImage.url; // Actualizar la URL en el modelo
+//         }
+//         await product.update(updates);
+//         return product;
+//     } catch (error) {
+//         throw error;
+//     }
+// };
+const updateProduct = async (id, updates) => {
     try {
-        const product = await Product.findByPk(id);
+        const product = await Product.findByPk(id); // Buscamos el producto por ID
+
         if (!product) {
             throw new Error(`ID de producto no existe, ID=${id}`);
         }
-         // Si hay un archivo (nueva imagen), actualizamos la imagen en Cloudinary
-         if (files && files.length > 0) {
-            const file = files[0]; // Considerando que sólo se sube un archivo a la vez
-            const updatedImage = await updateUpload(file, product.imageUrl); // Actualizar en Cloudinary
-            updates.imageUrl = updatedImage.url; // Actualizar la URL en el modelo
-        }
+
+        // Actualizamos el producto con los nuevos valores, sin afectar la imagen
         await product.update(updates);
-        return product;
+
+        return product; // Retornamos el producto actualizado
     } catch (error) {
         throw error;
     }
