@@ -3,6 +3,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 export const GET_PRODUCT_SUBCATEGORIAS_ALL = "GET_PRODUCT_SUBCATEGORIAS_ALL";
 export const POST_CREATE_PRODUCT = 'POST_CREATE_PRODUCT';
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 
 // Obtener productos filtrados por tipo de venta, categoría y subcategoría
 export const getProductsSubCategorias = (tipo_venta, categoria, subcategoria) => {
@@ -55,7 +56,7 @@ export const postProduct = (formData) => {
 
 
 //modificar un producto
-export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+
 
 // Acción para actualizar un producto
 export const updateProduct = (id, formData) => {

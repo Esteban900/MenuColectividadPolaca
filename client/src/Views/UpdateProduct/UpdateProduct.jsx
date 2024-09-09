@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductsSubCategorias, updateProduct } from '../redux/actions';
+import { getProductsSubCategorias, updateProduct } from '../../redux/actions';
 import styles from './UpdateProduct.module.css';
 
 const UpdateProduct = () => {
