@@ -20,17 +20,7 @@
         width: 60%;
     }
   }
-  /* .image {
-    width: 285px;
-    height: 100px;
-    object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 10px;
-    padding-top: 5px;
-    margin-left: 5px;
-    border-radius: 8px;
-    
-  } */
+  
   .image {
     width: 90px;
     height: 80px;
@@ -61,6 +51,7 @@
     margin-top: -30%;
     margin-left: 35%;
     margin-right: 2%;
+    margin-bottom: 10px; /* Añade más espacio debajo del título */
 
   }
   @media (min-width: 768px) {
@@ -91,8 +82,10 @@
   .description {
     font-size: 18px;
     color: #333232;
-    margin-top: 13px;
-    padding: 6px;
+    /* margin-top: 13px; */
+    margin-top: 20px; /* Aumenta la separación entre la descripción y el título */
+    padding: 10px; /* Aumenta el relleno interno */
+    /* padding: 6px; */
     text-align: justify;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
     /* background-color: blue; */
