@@ -99,6 +99,29 @@ export const getAllProducts = () => {
     };
 };
 
+export const DELETE_PRODUCT = 'DELETE_PRODUCT';
+export const DELETE_PRODUCT_ERROR = 'DELETE_PRODUCT_ERROR';
+
+// Acción para eliminar un producto
+export const deleteProduct = (id) => {
+    return async (dispatch) => {
+        try {
+            await axios.delete(`${apiUrl}product/${id}`); // Ajusta la URL según tu configuración del backend
+            
+            dispatch({
+                type: DELETE_PRODUCT,
+                payload: id, // Enviamos el id del producto que se ha eliminado
+            });
+        } catch (error) {
+            console.error("Error deleting product:", error);
+            dispatch({
+                type: DELETE_PRODUCT_ERROR,
+                error: error.message,
+            });
+        }
+    };
+};
+
 // export const postProduct = (payload) => {
  
 //     return async function (dispatch) {

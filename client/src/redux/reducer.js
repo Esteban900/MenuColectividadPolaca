@@ -1,4 +1,4 @@
-import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, UPDATE_PRODUCT,GET_ALL_PRODUCTS  } from './actions';
+import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, UPDATE_PRODUCT,GET_ALL_PRODUCTS,  DELETE_PRODUCT, DELETE_PRODUCT_ERROR,  } from './actions';
 
 const initialState = {
     products: [],
@@ -7,6 +7,7 @@ const initialState = {
     lugarVenta: [],
     categoria: [],
     subCategoria: [], // Almacena los productos filtrados
+    error: null,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -48,6 +49,17 @@ const rootReducer = (state = initialState, action) => {
                 ...state,
                 allProducts: action.payload, // Actualiza el estado con todos los productos
             };
+            case DELETE_PRODUCT:
+                return {
+                    ...state,
+                    allProducts: state.allProducts.filter(product => product.id_product !== action.payload),
+                    products: state.products.filter(product => product.id_product !== action.payload),
+                };
+            case DELETE_PRODUCT_ERROR:
+                return {
+                    ...state,
+                    error: action.error,
+                };
         default:
             return state;
     }
