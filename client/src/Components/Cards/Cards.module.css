@@ -48,7 +48,7 @@
     padding: 5px;
     /* color: #333; */
     color: rgb(78, 4, 20);
-    margin-top: -30%;
+    margin-top: -40%;
     margin-left: 35%;
     margin-right: 2%;
     margin-bottom: 10px; /* Añade más espacio debajo del título */
@@ -84,7 +84,7 @@
     font-size: 18px;
     color: #333232;
     /* margin-top: 13px; */
-    margin-top: 20px; /* Aumenta la separación entre la descripción y el título */
+    margin-top: 30px; /* Aumenta la separación entre la descripción y el título */
     padding: 10px; /* Aumenta el relleno interno */
     /* padding: 6px; */
     text-align: justify;
