@@ -4,6 +4,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 export const GET_PRODUCT_SUBCATEGORIAS_ALL = "GET_PRODUCT_SUBCATEGORIAS_ALL";
 export const POST_CREATE_PRODUCT = 'POST_CREATE_PRODUCT';
 export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
+export const GET_ALL_PRODUCTS = 'GET_ALL_PRODUCTS';
 
 // Obtener productos filtrados por tipo de venta, categoría y subcategoría
 export const getProductsSubCategorias = (tipo_venta, categoria, subcategoria) => {
@@ -80,6 +81,23 @@ export const updateProduct = (id, formData) => {
     }
 };
 
+// Acción para obtener todos los productos
+export const getAllProducts = () => {
+    return async function (dispatch) {
+        try {
+            const response = await axios.get(`${apiUrl}product`); // Ajusta la URL según tu configuración del backend
+            const products = response.data;
+
+            dispatch({
+                type: GET_ALL_PRODUCTS,
+                payload: products,
+            });
+        } catch (error) {
+            console.error("Error fetching all products:", error);
+            dispatch({ type: 'GET_PRODUCTS_ERROR', error: error.message });
+        }
+    };
+};
 
 // export const postProduct = (payload) => {
  

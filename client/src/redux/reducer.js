@@ -1,4 +1,4 @@
-import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, UPDATE_PRODUCT  } from './actions';
+import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, UPDATE_PRODUCT,GET_ALL_PRODUCTS  } from './actions';
 
 const initialState = {
     products: [],
@@ -43,6 +43,11 @@ const rootReducer = (state = initialState, action) => {
                         product.id === action.payload.id ? action.payload : product
                     ),
                 };
+                case GET_ALL_PRODUCTS:
+            return {
+                ...state,
+                allProducts: action.payload, // Actualiza el estado con todos los productos
+            };
         default:
             return state;
     }

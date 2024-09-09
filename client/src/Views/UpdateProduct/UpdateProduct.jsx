@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProductsSubCategorias, updateProduct } from '../../redux/actions';
+import { getAllProducts, updateProduct } from '../../redux/actions'; // Asegúrate de que 'updateProduct' está exportada
 import styles from './UpdateProduct.module.css';
 
 const UpdateProduct = () => {
     const dispatch = useDispatch();
-    const products = useSelector((state) => state.products); // Obtiene los productos del estado
+    const products = useSelector((state) => state.allProducts); // Obtiene los productos del estado
     const [selectedProduct, setSelectedProduct] = useState(null); // Producto seleccionado
     const [formData, setFormData] = useState({
         name: '',
@@ -18,8 +18,8 @@ const UpdateProduct = () => {
     });
 
     useEffect(() => {
-        // Obtenemos los productos al montar el componente
-        dispatch(getProductsSubCategorias('all', 'all', 'all')); 
+        // Obtenemos todos los productos al montar el componente
+        dispatch(getAllProducts());
     }, [dispatch]);
 
     // Manejar cambio en el formulario
@@ -111,7 +111,7 @@ const UpdateProduct = () => {
                             onChange={handleInputChange}
                             placeholder="Tipos de Venta"
                         />
-                        <button type="submit">Actualizar!</button>
+                        <button type="submit">Actualizar</button>
                     </form>
                 </div>
             )}
