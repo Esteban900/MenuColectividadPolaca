@@ -11,10 +11,10 @@ const authRouter = require('./authRouter');
 
 const mainRouter = Router();
 
-// Ruta para la raíz '/'
-// mainRouter.get('/', (req, res) => {
-//     res.send('Bienvenido a la API de MenuColectividadPolaca');
-//   });
+//Ruta para la raíz '/'
+mainRouter.get('/', (req, res) => {
+    res.send('Bienvenido a la API de MenuColectividadPolaca');
+  });
 
 mainRouter.use('/product', productRouter);
 mainRouter.use('/menu', menuRouter);
