@@ -21,7 +21,10 @@ const Home = () => {
     const handleSalonClick = () => {
         navigate('/menu');
     }
-    
+
+    const handleKioscoClick = () => {
+        navigate('/kiosco');
+    }
 
     return (
         <div className={style.menuContainer}>
@@ -36,7 +39,7 @@ const Home = () => {
 {/* <button onClick={handleBackClick} className={style.backButton}><TbArrowBackUp /></button> */}
 <div className={style.menuOptions}>
         <button onClick={handleSalonClick} className={style.menuButton}> Salon</button>
-        {/* <button className={style.menuButton}>Kiosco</button> */}
+        <button onClick={handleKioscoClick} className={style.menuButton}>Kiosco</button>
             </div>
         </div>
     );

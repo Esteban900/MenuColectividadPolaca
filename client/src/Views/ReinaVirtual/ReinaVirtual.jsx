@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 const Reina = () => {
   const images = [
     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725513906/reina4_jc93bz.png',
-    // 'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725501438/reina1_zp58ws.png', // URL de la imagen 1
     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514074/reina2_xluoyl.png', // URL de la imagen 2
     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514983/reina5_tajusg.png'  // URL de la imagen 3
   ];
@@ -29,7 +28,7 @@ const Reina = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // Cambiar imagen cada 3 segundos
+    }, 3500); // Cambiar imagen cada 3 segundos
 
     return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonta
   }, [images.length]);

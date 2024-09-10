@@ -15,7 +15,7 @@
     justify-content: space-around;
     /* flex-direction:row; */
   }
-  @media (min-width: 768px) {
+  @media (min-width: 968px) {
     .Card {
         width: 60%;
     }
@@ -26,14 +26,14 @@
     height: 80px;
     object-fit: cover;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6);
-    margin-bottom: 10px;
-
-        margin-left: 3px;
+    margin-bottom: 20px;
+margin-top: 10px;
+        margin-left: 10px;
     border-radius: 100px;
     border: 2px solid black;
     
   }
-  @media (min-width: 768px) {
+  @media (min-width: 968px) {
     .image {
         width: 50%;
         height: 50%;
@@ -48,13 +48,13 @@
     padding: 5px;
     /* color: #333; */
     color: rgb(78, 4, 20);
-    margin-top: -20%;
-    margin-left: 35%;
+    margin-top: -23%;
+    margin-left: 38%;
     margin-right: 2%;
-    margin-bottom: 10px; /* Añade más espacio debajo del título */
+    margin-bottom:60px; /* Añade más espacio debajo del título */
 
   }
-  @media (min-width: 768px) {
+  @media (min-width: 968px) {
     .title {
         font-size: 20px;
       }
@@ -66,16 +66,23 @@
     font-weight: bold; /*grosor del texto*/
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.4);
    /* margin-left: 70%; */
-   margin-left: 5%;
- margin-top: -30%;
+  
    background-color: black;
    /* padding: 1px; */
-   padding-right: 5px;
+   /* padding-right: 5px;
    padding-left: 5px;
    margin-bottom: 8px;
+   margin-right: 250px; */
+   padding-right: 5%;
+   padding-left: 2%;
+   margin-left: 2%;
+   margin-top: -8%;
+   margin-bottom: 5%;
+   margin-right: 65%;
+   text-align: center;
   
   }
-  @media (min-width: 768px) {
+  @media (min-width: 968px) {
     .price {
         font-size: 16px;
       }
@@ -84,7 +91,7 @@
     font-size: 18px;
     color: #333232;
     /* margin-top: 13px; */
-    margin-top: 30px; /* Aumenta la separación entre la descripción y el título */
+    margin-top: 60px; /* Aumenta la separación entre la descripción y el título */
     padding: 10px; /* Aumenta el relleno interno */
     /* padding: 6px; */
     text-align: justify;
@@ -93,7 +100,7 @@
     margin-left: 1%;
     margin-right: 1%;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 968px) {
 
     .description {
         font-size: 22px;

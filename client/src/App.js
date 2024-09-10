@@ -7,7 +7,7 @@ import SaleTypeForm from './Views/SalesTypes/SalesTypesForm';
 import Reina from './Views/ReinaVirtual/ReinaVirtual';
 import AcercaDe from './Views/AcercaDe/AcercaDe';
 import Detail from './Views/Details/Details';
-
+import Kiosco from './Views/Kiosco/Kiosco';
 function App() {
   return (
     <div className="App">
@@ -20,6 +20,7 @@ function App() {
     <Route path='/reina' element={<Reina/>}/>
     <Route path='/acercade' element={<AcercaDe/>}/>
     <Route path='/detail' element={<Detail/>}/>
+    <Route path='/kiosco' element={<Kiosco/>}/>
     </Routes>
     </div>
   );

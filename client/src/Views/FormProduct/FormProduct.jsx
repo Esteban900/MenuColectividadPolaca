@@ -9,7 +9,7 @@ const Form = () => {
     const navigate = useNavigate();
 
     const handleMenuClick = () => {
-        navigate('/'); // Redirige a la página de inicio o landing page
+        navigate('/menu'); // Redirige a la página de inicio o landing page
         console.log("click back", handleMenuClick);
         
     }
@@ -145,7 +145,7 @@ const Form = () => {
                     <option value="Bebidas_sin_alcohol">Bebidas sin Alcohol</option>
                     <option value="Bebidas_con_alcohol">Bebidas con Alcohol</option>
                     <option value="Postres_Tradicionales">Postres</option>
-                    <option value="Comida_Kiosco">Comida Kiosco</option>
+                    <option value="Comida_al_Paso">Comida al Paso</option>
                 </select>
             </label>
                                      <label>

@@ -55,7 +55,7 @@ sequelize.define(
                   'Bebidas_sin_alcohol',
                   'Bebidas_con_alcohol',
                   'Postres_Tradicionales',
-                  'Comida_Kiosco',
+                  'Comida_al_Paso',
                 ];
                 if (!validSubCategories.includes(value)) {
                     throw new Error('Invalid subCategory');

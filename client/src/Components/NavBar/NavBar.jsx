@@ -28,15 +28,15 @@ const NavBar = ({ defaultSelectedMenu, defaultSelectedOption }) => {
     }, [defaultSelectedMenu, defaultSelectedOption, dispatch]);
 
     const handleBackClick = () => {
-        navigate(-1);
+        navigate('/home');
     };
 
     const handleBackMenuClick = () => {
-        navigate('/');
+        navigate('/'); 
     };
 
     const platosOptions = ['Platos Tipicos', 'Postres Tradicionales'];
-    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol'];
+    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol', 'Tragos tipicos', 'Cafeteria'];
 
     const handleMenuChange = (menu) => {
         setSelectedMenu(menu);

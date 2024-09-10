@@ -27,7 +27,7 @@ box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   display: flex;
   cursor: pointer;
   height: 40px;
-  margin-top: -25%;
+  margin-top: -20%;
   margin-bottom: 5px;
 }
 
@@ -46,7 +46,7 @@ box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
    width: 40px;
   height: 40px;
   margin-left:-70% ; 
-  margin-top: -25%; 
+  margin-top: -20%; 
 
 }
 
