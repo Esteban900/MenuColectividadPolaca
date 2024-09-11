@@ -28,6 +28,8 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 app.use(express.json());
 
+//PARA DESARROLLO
+
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', 'http://localhost:3000'); // update to match the domain you will make the request from
 //     res.header('Access-Control-Allow-Credentials', 'true');
@@ -35,6 +37,9 @@ app.use(express.json());
 //     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
 //     next();
 //   });
+
+//PARA PRODUCCION
+
 app.use(cors({
   origin: 'https://menu-colectividad-polaca.vercel.app', // Cambia esto a la URL de tu frontend
   credentials: true,

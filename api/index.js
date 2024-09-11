@@ -8,11 +8,14 @@
 const app = require ('./src/app');
 const { conn } = require('./src/db');
 
+//PARA DESARROLLO
 
 // conn.sync({ force: true}).then(() => {
 //     app.listen(3001,() => {
 //         console.log('%s listening at 3001');
 //     });
+
+    //PARA PRODUCCION
 
 conn.sync({ alter: true }).then(() => {
     const PORT = process.env.PORT || 3001; // Usa PORT de las variables de entorno o 3001 por defecto

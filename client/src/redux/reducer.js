@@ -1,4 +1,4 @@
-import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL } from './actions';
+import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS } from './actions';
 
 const initialState = {
     products: [],
@@ -7,6 +7,7 @@ const initialState = {
     lugarVenta: [],
     categoria: [],
     subCategoria: [], // Almacena los productos filtrados
+     loading: false, // Indicador de carga
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -24,9 +25,19 @@ const rootReducer = (state = initialState, action) => {
                 // Suponiendo que quieres agregar el nuevo producto a la lista de productos
                 products: [...state.products, action.payload],
             };
-        default:
-            return state;
-    }
+            case GET_PRODUCTS_REQUEST:
+                return {
+                    ...state,
+                    loading: true,
+                };
+            case GET_PRODUCTS_SUCCESS:
+                return {
+                    ...state,
+                    loading: false,
+                };
+                    default:
+                        return state;
+                }
 };
 
 export default rootReducer;

@@ -8,20 +8,31 @@ import { getProductsSubCategorias } from "../../redux/actions";
 const Menu = () => {
     const dispatch = useDispatch();
     
-    // Obtener los productos filtrados desde el estado global
-    const currentProducts = useSelector((state) => state.subCategoria);
+    // // Obtener los productos filtrados desde el estado global
+    // const currentProducts = useSelector((state) => state.subCategoria);
 
-    // Despachar acción para obtener productos por defecto al cargar
-    // useEffect(() => {
-    //     dispatch(getProductsSubCategorias('Salon', 'Platos Tipicos', 'Platos Tipicos'));
-    // }, [dispatch]);
+    // // Despachar acción para obtener productos por defecto al cargar
+    // // useEffect(() => {
+    // //     dispatch(getProductsSubCategorias('Salon', 'Platos Tipicos', 'Platos Tipicos'));
+    // // }, [dispatch]);
+
+
+// Obtener los productos filtrados y el estado de carga desde el estado global
+const currentProducts = useSelector((state) => state.subCategoria);
+const loading = useSelector((state) => state.loading);
+
+// Despachar acción para obtener productos por defecto al cargar
+useEffect(() => {
+    dispatch(getProductsSubCategorias('Salon', 'Platos Tipicos', 'Platos Tipicos'));
+}, [dispatch]);
+
 
     return (
         <div className={style.container}>
             {/* Pasar valores por defecto */}
             <NavBar defaultSelectedMenu="Platos Tipicos" defaultSelectedOption="Platos Tipicos" />     
             {/* Pasar productos filtrados al CardsContainer */}
-            <CardsContainer currentProducts={currentProducts} />
+            <CardsContainer currentProducts={currentProducts} loading={loading} />
         </div>
     );
 };

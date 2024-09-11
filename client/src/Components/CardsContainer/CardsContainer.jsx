@@ -2,8 +2,12 @@ import React from "react";
 import Card from "../Cards/Cards";
 import style from './CardsContainer.module.css';
 
-const CardsContainer = ({ currentProducts }) => {
+const CardsContainer = ({ currentProducts, loading  }) => {
     console.log("cardscontainer:", currentProducts);
+    
+     if (loading) {
+        return <div className={style.loading}>Cargando...</div>; // Mostrar mensaje o spinner de carga
+    }
     
     // if (!Array.isArray(currentProducts) || currentProducts.length === 0) {
     //     return <div className={style.text}>No se eNCONTRO</div>;

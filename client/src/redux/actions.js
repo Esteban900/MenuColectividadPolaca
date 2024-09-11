@@ -4,10 +4,13 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 export const GET_PRODUCT_SUBCATEGORIAS_ALL = "GET_PRODUCT_SUBCATEGORIAS_ALL";
 export const POST_CREATE_PRODUCT = 'POST_CREATE_PRODUCT';
+export const GET_PRODUCTS_REQUEST = 'GET_PRODUCTS_REQUEST';
+export const GET_PRODUCTS_SUCCESS = 'GET_PRODUCTS_SUCCESS';
 
 // Obtener productos filtrados por tipo de venta, categoría y subcategoría
 export const getProductsSubCategorias = (tipo_venta, categoria, subcategoria) => {
     return async function (dispatch) {
+        dispatch({ type: "GET_PRODUCTS_REQUEST" }); // Establecer estado loading en true
         try {
              const response = await axios.get(`${apiUrl}menu/${tipo_venta}/${categoria}/${subcategoria}`);
             // const response = await axios.get(`http://localhost:3001/menu/${tipo_venta}/${categoria}/${subcategoria}`);
@@ -19,6 +22,8 @@ export const getProductsSubCategorias = (tipo_venta, categoria, subcategoria) =>
             });
         } catch (error) {
             console.error("Error fetching products:", error);
+        }finally {
+            dispatch({ type: "GET_PRODUCTS_SUCCESS" }); // Establecer estado loading en false
         }
     };
 };
@@ -32,11 +37,12 @@ export const postProduct = (formData) => {
             // No es necesario crear un nuevo FormData aquí
             // ya que `formData` ya está creado y recibido
 
-            for (let pair of formData.entries()) {
-                // console.log(pair[0] + ', ' + pair[1]);
-            }
+            // for (let pair of formData.entries()) {
+            //     // console.log(pair[0] + ', ' + pair[1]);
+            // }
 
-            const response = await axios.post(`${apiUrl}product`, formData, {
+             const response = await axios.post(`${apiUrl}product`, formData, {
+              //const response = await axios.post(`http://localhost:3001/product`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

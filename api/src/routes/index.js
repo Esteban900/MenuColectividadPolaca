@@ -11,7 +11,7 @@ const authRouter = require('./authRouter');
 
 const mainRouter = Router();
 
-//Ruta para la raíz '/'
+//Ruta para la raíz '/' PARA PRODUCCION
 mainRouter.get('/', (req, res) => {
     res.send('Bienvenido a la API de MenuColectividadPolaca');
   });
