@@ -36,7 +36,7 @@ const NavBarKiosco = ({ defaultSelectedMenu, defaultSelectedOption }) => {
     };
 
     const platosOptions = ['Comida al Paso'];
-    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol', 'Tragos tipicos'];
+    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol'];
 
     const handleMenuChange = (menu) => {
         setSelectedMenu(menu);

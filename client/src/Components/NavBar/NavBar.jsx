@@ -51,7 +51,7 @@ const NavBar = ({ defaultSelectedMenu, defaultSelectedOption }) => {
     };
 
     const platosOptions = ['Platos Tipicos', 'Postres Tradicionales'];
-    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol', 'Tragos tipicos', 'Cafeteria'];
+    const bebidasOptions = ['Bebidas sin alcohol', 'Bebidas con alcohol'];
 
     const handleMenuChange = (menu) => {
         setSelectedMenu(menu);
