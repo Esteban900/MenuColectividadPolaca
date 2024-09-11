@@ -3,19 +3,30 @@ import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, GET_PRODUCTS_REQUE
 const initialState = {
     products: [],
     allProducts: [],
-    detail: [],
+   
     lugarVenta: [],
     categoria: [],
     subCategoria: [], // Almacena los productos filtrados
      loading: false, // Indicador de carga
+     cache: {}, // Almacena la caché
 };
 
 const rootReducer = (state = initialState, action) => {
     switch (action.type) {
      
         case GET_PRODUCT_SUBCATEGORIAS_ALL:
+            const { tipoVenta, categoria, subCategoria } = action.payload;
+
+            // Crear una clave única para la caché
+            const cacheKey = `${tipoVenta}_${categoria}_${subCategoria}`;
+
+            // Actualizar caché
             return {
                 ...state,
+                cache: {
+                    ...state.cache,
+                    [cacheKey]: action.payload.products, // Suponiendo que `action.payload.products` contiene los productos filtrados
+                },
                 subCategoria: action.payload, // Actualiza el estado con los productos filtrados
             };
 

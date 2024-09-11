@@ -14,7 +14,7 @@ const Home = () => {
     }
 
     const handleBackClick = () => {
-        navigate(-1); //regreso a la pag anterior
+        navigate('/'); //regreso a la pag anterior
         console.log("click back", handleBackClick);
     }
     

@@ -42,7 +42,7 @@ export const postProduct = (formData) => {
             // }
 
              const response = await axios.post(`${apiUrl}product`, formData, {
-              //const response = await axios.post(`http://localhost:3001/product`, formData, {
+             // const response = await axios.post(`http://localhost:3001/product`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
