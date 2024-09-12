@@ -1,8 +1,5 @@
 .container {
     text-align: center;
-    /* background-color: rgb(247, 202, 202); */
-    /*background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725329650/WhatsApp_Image_2024-09-02_at_23.13.04_fgvwae.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGUVOhkmEO-ub6FJeWLaLIK_iPGwqK8LelOg&s'); */
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725509582/5_nnqlht.png');
     background-size: cover;
     background-position: center;
@@ -12,8 +9,6 @@
   }
   
   .header {
-    /* background-color: rgba(255, 0, 0, 0.9); */
-    /* background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725325464/1_nwqpyi.jpg'); */
     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center;
@@ -24,8 +19,6 @@
     justify-content: center;
     flex-direction: column;
     border-radius: 5px;
-    /* filter: opacity(0.9); */
-    /* overflow: hidden; */
   }
   
   .logo {
@@ -38,15 +31,7 @@
   }
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
     .text h2 {
-    /* margin: 0;
-    font-size: 29px;
-    font-weight: bold;
-     text-shadow: 
-        -1px -1px 0 black,  
-         1px -1px 0 black,
-        -1px  1px 0 black,
-         1px  1px 0 black;  */
-          font-size: 2.5rem;
+    font-size: 2.5rem;
     font-family: 'Dancing Script', cursive;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -82,26 +67,12 @@
     filter:drop-shadow(0px 0px 1px white);
   }
   
-  /* .button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 35px 30px;
-    margin: 10px;
-    font-size: 25px;
-    cursor: pointer;
-    width: 80%;
-    max-width: 300px;
-    border-radius: 5px;
-  } */
-  
   .buttonMenu {
   
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725336986/tipicorectangulo_hgbpvx.png');
     background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
    background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; 
-    /* background-color: red; */
     color: white;
     border: none;
     padding: 45px 30px;
@@ -118,9 +89,7 @@
         -1px  1px 0 black,
          1px  1px 0 black;
   }
-  .buttonQueen {
-    /* background-color: red; */
-    
+  .buttonQueen {    
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725324939/fondoreina2_q1xq2m.png');
      background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -146,7 +115,6 @@
      background-size:100%; /* Ajusta el tamaño de la imagen para que encaje dentro del contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; 
-    /* background-color: red; */
     color: white; 
     border: none;
     padding: 45px 30px;

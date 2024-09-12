@@ -3,13 +3,6 @@ import styles from './AcercaDe.module.css';
 import { useNavigate } from "react-router-dom";
 
 const AcercaDe = () => {
-//   const images = [
-//     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725513906/reina4_jc93bz.png',
-//     // 'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725501438/reina1_zp58ws.png', // URL de la imagen 1
-//     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514074/reina2_xluoyl.png', // URL de la imagen 2
-//     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514983/reina5_tajusg.png'  // URL de la imagen 3
-//   ];
-//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const navigate = useNavigate();
 
@@ -23,16 +16,6 @@ const AcercaDe = () => {
       navigate(-1); //regreso a la pag anterior
       console.log("click back", handleBackClick);
   }
-  
- 
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-//     }, 4000); // Cambiar imagen cada 3 segundos
-
-//     return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonta
-//   }, [images.length]);
 
   return (
     <div className={styles.casaContainer}>
@@ -45,7 +28,6 @@ const AcercaDe = () => {
     </div>
 </div>
       <h2 className={styles.title}>Colectividad Polaca</h2>
-      {/* <h3 className={styles.reinaName}>Paula Florencia Solis Cukla</h3> */}
       
       <img src='https://res.cloudinary.com/dmqszpq9k/image/upload/v1725516811/casa_q6blzf.png' alt="Casa" className={styles.casaImage} />
       <div className={styles.description}>

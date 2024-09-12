@@ -3,7 +3,6 @@ import {  POST_CREATE_PRODUCT, GET_PRODUCT_SUBCATEGORIAS_ALL, GET_PRODUCTS_REQUE
 const initialState = {
     products: [],
     allProducts: [],
-    detail: [],
     lugarVenta: [],
     categoria: [],
     subCategoria: [], // Almacena los productos filtrados

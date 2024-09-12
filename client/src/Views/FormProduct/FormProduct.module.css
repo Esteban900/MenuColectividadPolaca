@@ -1,22 +1,16 @@
 .header {
   margin-top: -15px;
-   /* background-color: green;  */
     display: flex;
     align-items: center;
     justify-content: space-between; /* Asegura que el contenido se distribuya adecuadamente */
-    /* width: 98%; */
-    /* height: 40px; */
     padding: 0px;
     border-radius: 2px;
   }
   /*bandera + inicio*/
   .imageContainer {
-    /* background-color: yellow; */
     position: relative;
-    /* display: inline-block;*/
     text-align: center; 
     cursor: pointer;
-    /* padding-left: 130px; */
     margin-left: 140px;
     margin-right: 140px;
     padding-top: 5px;

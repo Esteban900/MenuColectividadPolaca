@@ -144,7 +144,8 @@ const Form = () => {
                     <option value="Platos_Tipicos">Platos Típicos</option>
                     <option value="Bebidas_sin_alcohol">Bebidas sin Alcohol</option>
                     <option value="Bebidas_con_alcohol">Bebidas con Alcohol</option>
-                    <option value="Postres_Tradicionales">Postres</option>
+                    <option value="Tragos_Tipicos">Tragos Tipicos</option>
+                    <option value="Postres_Tradicionales">Postres Tradicionales</option>
                     <option value="Comida_al_Paso">Comida al Paso</option>
                 </select>
             </label>

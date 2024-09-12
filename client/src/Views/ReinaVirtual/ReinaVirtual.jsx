@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const Reina = () => {
   const images = [
     'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725513906/reina4_jc93bz.png',
-    'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514074/reina2_xluoyl.png', // URL de la imagen 2
-    'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514983/reina5_tajusg.png'  // URL de la imagen 3
+    'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514074/reina2_xluoyl.png',
+    'https://res.cloudinary.com/dmqszpq9k/image/upload/v1725514983/reina5_tajusg.png' 
   ];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -45,7 +45,7 @@ const Reina = () => {
 </div>
       <h2 className={styles.title}>Polska Krolowa</h2>
       <h3 className={styles.reinaName}>Paula Florencia Solis Cukla</h3>
-      <button className={styles.voteButton} onClick={() => window.open('https://reina.elterritorio.ar/2024/colectividad/11-polaca/56-paula-florencia-solis/', '_blank')} >Votar a nuestra Reina virtual</button>
+      {/* <button className={styles.voteButton} onClick={() => window.open('https://reina.elterritorio.ar/2024/colectividad/11-polaca/56-paula-florencia-solis/', '_blank')} >Votar a nuestra Reina virtual</button> */}
       <img src={images[currentImageIndex]} alt="Reina" className={styles.reinaImage} />
       <div className={styles.description}>
 

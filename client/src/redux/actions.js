@@ -33,13 +33,6 @@ export const postProduct = (formData) => {
       
     return async function (dispatch) {
         try {
-            
-            // No es necesario crear un nuevo FormData aquí
-            // ya que `formData` ya está creado y recibido
-
-            // for (let pair of formData.entries()) {
-            //     // console.log(pair[0] + ', ' + pair[1]);
-            // }
 
              const response = await axios.post(`${apiUrl}product`, formData, {
              // const response = await axios.post(`http://localhost:3001/product`, formData, {
@@ -54,7 +47,6 @@ export const postProduct = (formData) => {
             return response.data; // Aquí devolvemos la respuesta
             // return response;
         } catch (error) {
-            // console.error('Error posting product:', error);
             dispatch({ type: 'POST_PRODUCT_ERROR', error: error.message });
             throw error; // Aquí lanzamos el error para que el componente pueda capturarlo
         }

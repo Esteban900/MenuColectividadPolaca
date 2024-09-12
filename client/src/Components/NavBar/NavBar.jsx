@@ -12,20 +12,7 @@ const NavBar = ({ defaultSelectedMenu, defaultSelectedOption }) => {
     const [selectedOption, setSelectedOption] = useState(defaultSelectedOption);
     const [selectedPlatoOption, setSelectedPlatoOption] = useState('');
     const [selectedBebidaOption, setSelectedBebidaOption] = useState('');
-
-    // useEffect(() => {
-    //     if (defaultSelectedMenu === 'Platos Tipicos') {
-    //         setSelectedMenu('Platos Tipicos');
-    //         setSelectedPlatoOption(defaultSelectedOption);
-    //         setSelectedBebidaOption('');
-    //         dispatch(getProductsSubCategorias('Salon', 'Platos Tipicos', defaultSelectedOption));
-    //     } else if (defaultSelectedMenu === 'Bebidas') {
-    //         setSelectedMenu('Bebidas');
-    //         setSelectedPlatoOption('');
-    //         setSelectedBebidaOption(defaultSelectedOption);
-    //         dispatch(getProductsSubCategorias('Salon', 'Bebidas', defaultSelectedOption));
-    //     }
-    // }, [defaultSelectedMenu, defaultSelectedOption, dispatch]);
+   
     useEffect(() => {
         if (defaultSelectedMenu && defaultSelectedOption) {
             if (defaultSelectedMenu === 'Platos Tipicos') {

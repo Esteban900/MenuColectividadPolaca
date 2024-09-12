@@ -1,5 +1,4 @@
 .reinaContainer {
-    /* background-color: #e0e0e0; */
     background-image: url('https://res.cloudinary.com/dmqszpq9k/image/upload/v1725509582/5_nnqlht.png');
     background-size: cover;
     background-position: center;
@@ -12,27 +11,18 @@
 
   .header {
     margin-top: -15px;
-     /* background-color: green;  */
       display: flex;
       align-items: center;
       justify-content: space-between; /* Asegura que el contenido se distribuya adecuadamente */
-      /* width: 98%; */
-      /* height: 40px; */
       padding: 0px;
       border-radius: 2px;
     }
     /*bandera + inicio*/
     .imageContainer {
-      /* background-color: yellow; */
       position: relative;
-      /* display: inline-block;*/
       text-align: center; 
       cursor: pointer;
-      /* padding-left: 00%; */
-      /* margin-left: 140px;
-      margin-right: 140px; */
       margin-left: 35%;
-      /* margin-right: 50%; */
       padding-top: 5px;
   }
   
@@ -44,12 +34,9 @@
   }
   /* BOTON BACK*/
   .buttonBack {
-      /* background-color: yellow; */
       position: absolute;
       display: flex;
-      /* align-items:start; */
       cursor: pointer;
-      /* padding-left: -500px; */
       width: 40px;
       height: 35px;
       margin-left:5% ; 
@@ -59,7 +46,6 @@
     .logoBack {
       border-radius: 95px;
       width: 30px;
-      /* height: auto; */
     
     }
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');

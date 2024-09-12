@@ -36,7 +36,6 @@ const Home = () => {
         <img src="https://res.cloudinary.com/dmqszpq9k/image/upload/v1725438888/ATRAS2_p6ic2j.png" alt="regresar" className={style.logoBack} />
     </div>
 </div>
-{/* <button onClick={handleBackClick} className={style.backButton}><TbArrowBackUp /></button> */}
 <div className={style.menuOptions}>
         <button onClick={handleSalonClick} className={style.menuButton}> Salon</button>
         <button onClick={handleKioscoClick} className={style.menuButton}>Kiosco</button>
